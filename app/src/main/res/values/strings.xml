@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tinder Demo</string>
+    <string name="string_my_password">My password is</string>
+    <string name="string_my_dob">My dob is</string>
+    <string name="string_my_cell">My cell number is</string>
+    <string name="string_my_address">My address is</string>
+    <string name="string_my_string">My name is</string>
+    <string name="favourite_users">Favourite Users</string>
+</resources>

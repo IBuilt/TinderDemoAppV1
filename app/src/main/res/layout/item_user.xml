@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/color_stroke"
+    app:strokeWidth="0.5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="18dp">
+
+        <View
+            android:id="@+id/layoutBelowProfile"
+            android:layout_width="0dp"
+            android:layout_height="122dp"
+            android:background="@color/color_background_below_profile_picture"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/color_border_below_background_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBelowProfile" />
+
+        <FrameLayout
+            android:id="@+id/layoutBaseUserProfile"
+            android:layout_width="178dp"
+            android:layout_height="178dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/border_below_user_profile"
+            android:padding="6dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageViewUserPicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:scaleType="fitXY"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircularUserPhoto"
+                app:strokeWidth="2dp" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/work_sans"
+            android:lines="1"
+            android:text="Header"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/color_header"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutBaseUserProfile" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/work_sans"
+            android:lines="2"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Description"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textColor="@color/color_description"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewHeader" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfile"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_outline_account_circle_24"
+                app:iconTint="@color/color_button_tint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDob"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_outline_date_range_24"
+                app:iconTint="@color/color_button_tint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddress"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_map_24"
+                app:iconTint="@color/color_button_tint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPhone"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_baseline_phone_24"
+                app:iconTint="@color/color_button_tint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistered"
+                style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_outline_lock_24"
+                app:iconTint="@color/color_button_tint" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/left_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_lock_24" />
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>
